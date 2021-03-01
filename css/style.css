@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::selection{
+    background: #f9d700;
+    color: #fff;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 200vh;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 90%;
+    margin: 0px auto;
+    max-width: 1150px;
+}
+/* NAVBAR */
+nav{
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    position: fixed;
+    width: 90%;
+    max-width: 1150px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+nav .logo{
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+}
+nav .main-menu > ul{
+    display: flex;
+}
+nav .main-menu ul li{
+    margin: 0px 15px;
+    position: relative;
+}
+nav .main-menu ul li a{
+    color: inherit;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+nav .main-menu ul li a i{
+    margin-left: 5px;
+    transition: 250ms ease-in-out;
+}
+nav .main-menu > ul > li:hover > a >i{
+    transform: rotateZ(-180deg);
+}
+nav .main-menu ul li:hover > ul{
+    opacity: 1;
+    transition: 350ms ease-in-out;
+    visibility: visible;
+}
+
+nav .main-menu ul ul{
+    background: #fff;
+    color: #000;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    box-shadow: 10px 10px 20px rgba( 0, 0, 0, 0.4) ;
+    width: 180px;
+    border-radius: 2px;
+    right: 0;
+    top: 25px;
+}
+nav .main-menu ul ul li{
+    margin: 15px 0;
+    padding-left: 15px;
+    
+}
+nav .main-menu ul ul li a{
+    transition: 250ms ease-in-out;
+}
+nav .main-menu ul ul li:hover > a{
+    color: #f9d700;
+}
+nav .main-menu ul ul li a i{
+    margin-left: 60px;
+}
+nav .main-menu ul ul ul{
+    right: 97%;
+    top: 0px;
+}
+/* HEADER */
+.header header{
+    width: 100%;
+    height: 100vh; 
+    position: relative;
+    background-color: rgba( 0, 0, 0, 0.7);
+    padding: 1px;
+}
+.header header img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -5;
+}
+.header header .booking{
+    /* border: 1px solid red; */
+    width: 50%;
+    color: #fff;
+}
+.header header .booking h1{
+    color: #f9d700;
+    font-size: 45px;
+}
+.header header .booking p{
+    font-size: 14px;
+}
+.header header .booking a{
+    background: #f9d700;
+    color: #000;
+    padding: 15px 25px;
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 25px;
+    transition: 250ms ease-in-out;
+}
+.header header .booking a:hover{
+    background: #fff;
+}
+.header header .reservation{
+    /* border: 1px solid green; */
+    width: 40%;
+    max-width: 380px;
+}
+.header header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid blue; */
+    height: 100vh;
+}
+.header header .reservation form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background:#f9d700 ;
+    padding: 50px 0;
+} 
+.header header .reservation form input, .header header .reservation form select{
+    margin-bottom: 20px;
+    width: 60%;
+    /* border-top: 2px solid red; */
+    background: #000;
+    padding: 10px 20px;
+    color:rgba( 255, 255, 255, 0.4);
+    border-radius: 4px;
+    border: none;
+}
+.header header .reservation form h1{
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+/* CONTENT */
+.content{
+    background-color: #f9f9ff;
+    padding: 1px;
+    padding-bottom: 100px;
+}
+.content .container .image-galery{
+    display: flex;
+    justify-content: space-between;
+}
+.content .column{
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+}
+.content .column img{
+    /* border: 2px solid red; */
+    margin-bottom: 30px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    position: relative;
+}
+.content .image-galery .column-2{
+    margin-top: 80px;
+
+}
+.content .title{
+    margin: 150px 0 100px 0;
+    text-align: center;
+}
+.content .image-galery img::after{
+    content: "Read this -";
+    background-color: yellow;
+    color: red;
+    font-weight: bold;
+}
+.content .title h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.content .title h6{
+    font-size: 14px;
+    font-weight: 300;
+    color: #777;
+    margin-top: 15px;
+}
+/* FOOTER */
+.footer{
+    background: rgba( 0, 0, 0, 1);
+    padding: 100px 0;
+}
+.footer footer .info{
+    display: flex;
+    justify-content: space-between;
+}
+.footer footer .info div{
+    /* border: 1px solid red; */
+}
+.footer footer .info div h1{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.footer footer .info div ul a{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
+    display: inline-block;
+    transition: 250ms ease-in-out;
+}
+.footer footer .info div span{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.footer footer .info div ul a:hover{
+    color: #f9d700;
+}
+.footer footer .info .social ul{
+    display: flex;
+    justify-content: space-between;
+}
+.footer footer .info .social ul li i{
+    color: #fff;
+}
+.footer footer .info .newsletter form{
+    display: flex;
+    background: #fff;
+    justify-content: space-between;
+}
+.footer footer .info .newsletter form input{
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+}
+.footer footer .info .newsletter form button{
+    border: none;
+    background: #f9d700;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.footer footer > span{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    
+}
+.footer footer > span a{
+    color:#f9d700 ;
+}
+.footer footer > span i{
+    color: #f9d700;
+}
